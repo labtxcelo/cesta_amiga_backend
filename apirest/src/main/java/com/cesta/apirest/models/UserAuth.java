@@ -1,4 +1,4 @@
-/*package com.cesta.apirest.models;
+package com.cesta.apirest.models;
 
 import java.io.Serializable;
 
@@ -27,5 +27,7 @@ private static final long serialVersionUTD = 1L;
 	private String senha;
 	
 	private String tipoUsuario;
+	
+	private boolean logado;
 
-}*/
+}

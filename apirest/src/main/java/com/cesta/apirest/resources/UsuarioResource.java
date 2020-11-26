@@ -72,5 +72,4 @@ public class UsuarioResource {
 		return usuarioRepository.save(usuario);
 	}
 	
-	
 }
