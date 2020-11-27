@@ -14,7 +14,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 
-    /* @Override
+     @Override
      protected void configure(HttpSecurity http) throws Exception {
             http.csrf().disable().authorizeRequests()
             .antMatchers(HttpMethod.GET, "/" ).permitAll()

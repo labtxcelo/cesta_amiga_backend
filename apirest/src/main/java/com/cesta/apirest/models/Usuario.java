@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -16,15 +17,15 @@ public class Usuario implements Serializable {
 	private static final long serialVersionUTD = 1L;
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(columnDefinition = "serial")
+	@SequenceGenerator(name = "SQ_USUARIO", sequenceName = "SQ_USUARIO", allocationSize = 1)
+	@GeneratedValue(generator = "SQ_USUARIO")
 	private long id;
 	
 	private String nome;
 	
 	private String email;
 	
-	private String senha;
+	private String password;
 	
 	private String tipoPessoa;
 	
@@ -68,12 +69,12 @@ public class Usuario implements Serializable {
 		this.email = email;
 	}
 
-	public String getSenha() {
-		return senha;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setSenha(String senha) {
-		this.senha = senha;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getTipoPessoa() {

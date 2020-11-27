@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import com.cesta.apirest.models.Usuario;
 import com.cesta.apirest.repository.UsuarioRepository;
+import com.cesta.apirest.service.UsuarioService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -27,6 +28,9 @@ import io.swagger.annotations.ApiOperation;
 @Api(value="API REST Usuarios")
 @CrossOrigin(origins="*")
 public class UsuarioResource {
+	
+	@Autowired
+	UsuarioService usuarioService;
 
 	@Autowired
 	UsuarioRepository usuarioRepository;
@@ -53,7 +57,7 @@ public class UsuarioResource {
 	@ApiOperation(value = "Cadastra um usuário")
 	@RequestMapping(value = "/cadastrar", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
 	public Usuario cadastrarUsuario(@RequestBody Usuario usuario) {
-		return usuarioRepository.save(usuario);
+		return usuarioService.save(usuario);
 	}
 	
 	@ResponseBody
