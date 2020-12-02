@@ -33,8 +33,6 @@ public class UserAuth implements Serializable {
 
 	private String tipoUsuario;
 
-	private boolean logado;
-
 	public long getId() {
 		return id;
 	}
@@ -83,13 +81,6 @@ public class UserAuth implements Serializable {
 		this.tipoUsuario = tipoUsuario;
 	}
 
-	public boolean isLogado() {
-		return logado;
-	}
-
-	public void setLogado(boolean logado) {
-		this.logado = logado;
-	}
 
 	public static long getSerialversionutd() {
 		return serialVersionUTD;

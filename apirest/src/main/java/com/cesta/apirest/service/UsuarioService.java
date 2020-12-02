@@ -27,6 +27,7 @@ public class UsuarioService {
 		
 		userAuth.setEmail(usuario.getEmail());
 		userAuth.setPassword(usuario.getPassword());
+		userAuth.setNome(usuario.getNome());
 		userAuth.setTipoUsuario(usuario.getTipoUsuario());
 		userAuth.setUsuario(usuario);
 		authRepository.save(userAuth);
