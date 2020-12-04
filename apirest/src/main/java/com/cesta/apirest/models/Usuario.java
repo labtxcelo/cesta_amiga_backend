@@ -31,12 +31,30 @@ public class Usuario implements Serializable {
 	
 	private String documento;
 	
-	private String CEP;
+	private String cep;
 	
 	private String estado;
 
 	private String cidade;
 	
+	private String bairro;
+	
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
 	private String logradouro;
 	
 	private String numero;

@@ -27,6 +27,42 @@ private static final long serialVersionUTD = 1L;
 	private int quantidade;
 	
 	private int quantidadeRecebido;
-	
 
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public Item getItem() {
+		return item;
+	}
+
+	public void setItem(Item item) {
+		this.item = item;
+	}
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+
+	public int getQuantidadeRecebido() {
+		return quantidadeRecebido;
+	}
+
+	public void setQuantidadeRecebido(int quantidadeRecebido) {
+		this.quantidadeRecebido = quantidadeRecebido;
+	}
+
+	public static long getSerialversionutd() {
+		return serialVersionUTD;
+	}
+	
+	
 }
