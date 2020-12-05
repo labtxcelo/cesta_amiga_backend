@@ -1,6 +1,7 @@
 package com.cesta.apirest.models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -33,8 +34,8 @@ public class Necessidade implements Serializable {
 
 	private String descricao;
 
-	@OneToMany
-	private List<NecessidadeItem> itens;
+	@OneToMany(cascade = CascadeType.PERSIST)
+	private List<NecessidadeItem> itens = new ArrayList<>();
 
 	private Boolean statusEncerrado;
 
