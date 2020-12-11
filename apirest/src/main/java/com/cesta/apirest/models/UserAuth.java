@@ -33,6 +33,12 @@ public class UserAuth implements Serializable {
 
 	private String tipoUsuario;
 
+	public UserAuth(Long userId) {
+		this.id = userId;
+	}
+
+	public UserAuth() {}
+
 	public long getId() {
 		return id;
 	}

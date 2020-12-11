@@ -1,5 +1,7 @@
 package com.cesta.apirest.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,5 +21,9 @@ public class NecessidadeService {
 	
 		return necessidade;
 	}    
+	
+	public List<Necessidade> buscaNecessidadePorUsuario(Long userId){
+		return repository.findAllByUser(new UserAuth(userId));
+	}
 
 }
