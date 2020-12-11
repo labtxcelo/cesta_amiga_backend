@@ -25,5 +25,9 @@ public class NecessidadeService {
 	public List<Necessidade> buscaNecessidadePorUsuario(Long userId){
 		return repository.findAllByUser(new UserAuth(userId));
 	}
+	
+	public int retornaQuantidadeNecessidades(){
+		return repository.findAll().size();
+	}
 
 }

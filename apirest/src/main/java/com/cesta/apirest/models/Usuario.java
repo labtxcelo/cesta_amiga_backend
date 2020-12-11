@@ -39,6 +39,15 @@ public class Usuario implements Serializable {
 	
 	private String bairro;
 	
+	private String logradouro;
+	
+	private String numero;
+	
+	private String complemento;
+	
+	private String tipoUsuario;
+	
+	
 	public String getCep() {
 		return cep;
 	}
@@ -54,14 +63,6 @@ public class Usuario implements Serializable {
 	public void setBairro(String bairro) {
 		this.bairro = bairro;
 	}
-
-	private String logradouro;
-	
-	private String numero;
-	
-	private String complemento;
-	
-	private String tipoUsuario;
 
 	public long getId() {
 		return id;

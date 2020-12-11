@@ -23,9 +23,50 @@ public class Doacao implements Serializable{
 	private long id;
 	
 	@ManyToOne
-	private Usuario user;
+	private UserAuth user;
+
+	@ManyToOne
+	private Necessidade necessidade;
 	
 	@OneToMany
 	private List<ItemDoacao> itensDoacao;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public UserAuth getUser() {
+		return user;
+	}
+
+	public void setUser(UserAuth user) {
+		this.user = user;
+	}
+
+	public Necessidade getNecessidade() {
+		return necessidade;
+	}
+
+	public void setNecessidade(Necessidade necessidade) {
+		this.necessidade = necessidade;
+	}
+
+	public List<ItemDoacao> getItensDoacao() {
+		return itensDoacao;
+	}
+
+	public void setItensDoacao(List<ItemDoacao> itensDoacao) {
+		this.itensDoacao = itensDoacao;
+	}
+
+	public static long getSerialversionutd() {
+		return serialVersionUTD;
+	}
+	
+	
 
 }

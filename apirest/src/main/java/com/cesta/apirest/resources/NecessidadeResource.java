@@ -56,5 +56,13 @@ public class NecessidadeResource {
 	public List<Necessidade> sendNecessidadeByUserAuthId(@PathVariable(value="userId") Long userId){
 		return necessidadeService.buscaNecessidadePorUsuario(userId);
 	}
+	
+	@ResponseBody
+	@ResponseStatus(HttpStatus.OK)
+	@ApiOperation(value = "Busca todas as Necessidades criadas")
+	@RequestMapping(value = "/total-necessidades", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
+	public int retornaTotalNecessidades(){
+		return necessidadeService.retornaQuantidadeNecessidades();
+	}
 
 }
